@@ -22,8 +22,21 @@
         </ul>
     </nav>
     <main>
-        {{ $slot }}
+        <div class="container">
+            {{ $slot }}
+        </div>
     </main>
+
+    <footer>
+        <p>Copyright &copy; <small id="small">
+                <script>
+                    const date = new Date();
+                    document.getElementById('small');
+                    small.innerText = date.getFullYear()
+                </script>
+            </small>, All Rights reserved</p>
+        <a href="/listings/create" class="footer-link">Post</a>
+    </footer>
 </body>
 
 </html>
